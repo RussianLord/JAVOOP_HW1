@@ -56,8 +56,8 @@ public class Main {
     }
 
     public static void comparison(Auto car1, Auto car2) {
-        System.out.println("Марка: " + car1.getBrand() + " --- " + car2.getBrand());
-        System.out.println("Модель: " + car1.getModel() + " --- " + car2.getModel());
+        System.out.println("Марка: " + ANSI_GREEN + car1.getBrand() + ANSI_RESET + " --- " + ANSI_RED + car2.getBrand() + ANSI_RESET);
+        System.out.println("Модель: " + ANSI_GREEN + car1.getModel() + ANSI_RESET + " --- " + ANSI_RED + car2.getModel() + ANSI_RESET);
         System.out.println("Цвет: " + car1.getColor() + " --- " + car2.getColor());
         System.out.print("Год: " + car1.getYear() + " --- " + car2.getYear());
         if (car1.getYear() > car2.getYear())
