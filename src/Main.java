@@ -51,38 +51,12 @@ public class Main {
         lamborghiniD.start();
         lamborghiniD.stop();
         pagani.path(pagani.getCity());
+        porche911.start();
+        porche911.stop();
+        porche911.path(porche911.getCity());
 
-        comparison(pagani, lamborghiniH);
+        Auto.comparison(pagani,lamborghiniD);
     }
 
-    public static void comparison(Auto car1, Auto car2) {
-        System.out.println("Марка: " + ANSI_GREEN + car1.getBrand() + ANSI_RESET + " --- " + ANSI_RED + car2.getBrand() + ANSI_RESET);
-        System.out.println("Модель: " + ANSI_GREEN + car1.getModel() + ANSI_RESET + " --- " + ANSI_RED + car2.getModel() + ANSI_RESET);
-        System.out.println("Цвет: " + car1.getColor() + " --- " + car2.getColor());
-        System.out.print("Год: " + car1.getYear() + " --- " + car2.getYear());
-        if (car1.getYear() > car2.getYear())
-            System.out.println(ANSI_GREEN + "  ~~~ " + car1.getBrand() + " " + car1.getModel() + " Более свежая модель" + ANSI_RESET);
-        else
-            System.out.println(ANSI_RED + "  ~~~ " + car2.getBrand() + " " + car2.getModel() + " Более свежая модель" + ANSI_RESET);
-        System.out.print("Мощность л.с.: " + car1.getPower() + " --- " + car2.getPower());
-        if (car1.getPower() > car2.getPower())
-            System.out.println(ANSI_GREEN + "  ~~~ " + car1.getBrand() + " " + car1.getModel() + " На ~" + (int) (car1.getPower() - car2.getPower()) + "л.с. мощнее." + ANSI_RESET);
-        else
-            System.out.println(ANSI_RED + "  ~~~ " + car2.getBrand() + " " + car2.getModel() + " На ~" + (int) (car2.getPower() - car1.getPower()) + "л.с. мощнее." + ANSI_RESET);
-        System.out.print("Максимальная скорость км/ч: " + car1.getSpeed() + " --- " + car2.getSpeed());
-        if (car1.getSpeed() > car2.getSpeed())
-            System.out.println(ANSI_GREEN + "  ~~~ " + car1.getBrand() + " " + car1.getModel() + " На " + (car1.getSpeed() - car2.getSpeed()) + "км/ч быстрее." + ANSI_RESET);
-        else
-            System.out.println(ANSI_RED + "  ~~~ " + car2.getBrand() + " " + car2.getModel() + " На " + (car2.getSpeed() - car1.getSpeed()) + "км/ч быстрее." + ANSI_RESET);
-        System.out.print("Производительность: " + car1.getAveragePower() + " --- " + car2.getAveragePower());
-        if (car1.getAveragePower() > car2.getAveragePower())
-            System.out.println(ANSI_GREEN + "  ~~~ " + car1.getBrand() + " " + car1.getModel() + " На " + (car1.getAveragePower() - car2.getAveragePower()) + " Производительней." + ANSI_RESET);
-        else
-            System.out.println(ANSI_RED + "  ~~~ " + car2.getBrand() + " " + car2.getModel() + " На " + (car2.getAveragePower() - car1.getAveragePower()) + " Производительней." + ANSI_RESET);
-        System.out.print("Цена: " + car1.getPrice() + " --- " + car2.getPrice());
-        if (car1.getPrice() < car2.getPrice())
-            System.out.println(ANSI_GREEN + "  ~~~ " + car1.getBrand() + " " + car1.getModel() + " На " + (int) (car2.getPrice() - car1.getPrice()) + " кредитов дешевле." + ANSI_RESET);
-        else
-            System.out.println(ANSI_RED + "  ~~~ " + car2.getBrand() + " " + car2.getModel() + " На " + (int) (car1.getPrice() - car2.getPrice()) + " кредитов дешевле." + ANSI_RESET);
-    }
+
 }
