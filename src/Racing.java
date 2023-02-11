@@ -9,10 +9,10 @@ public class Racing {
     static void autosport(Auto car1, Auto car2, Auto car3, Auto car4, Track map) {
 
         System.out.println("Добро пожаловать на автогонки RTX-Life!!!\n");
-        delay();
+        delay(2);
         System.out.println("Сегодня в заезде учавствуют: " + car1.getModel() + " / " + car2.getModel() + " / "
                 + car3.getModel() + " / " + car4.getModel());
-        delay();
+        delay(2);
         Map<Integer, String> racers = new HashMap<>();
         racers.put(1, car1.getBrand() + " " + car1.getModel());
         racers.put(2, car2.getBrand() + " " + car2.getModel());
@@ -30,6 +30,7 @@ public class Racing {
         int maxSpeed = 250;
         int carSpeed = random.nextInt(maxSpeed - minSpeed) + minSpeed;
         Map<String, Integer> racer = new HashMap<>();
+        String winner = "";
         for (int i = 1; i <= map.getLap(); i++) {
             carSpeed = random.nextInt(maxSpeed - minSpeed) + minSpeed;
             car1.speed = carSpeed;
@@ -48,16 +49,18 @@ public class Racing {
             for (Map.Entry<String, Integer> it : racer.entrySet()) {
                 int max = Collections.max(racer.values());
                 if (max == it.getValue()) {
+                    winner = it.getKey();
                     System.out.println("\nАвтомобиль: " + ANSI_GREEN + it.getKey() + ANSI_RESET + " на первой позиции со скоростью: " + ANSI_RED + max + ANSI_RESET);
-
                 }
             }
+            delay(3);
         }
+        System.out.println("\nПОБЕДИТЕЛЬ " + ANSI_GREEN + winner + ANSI_RESET);
     }
 
-    static void delay() {
+    static void delay(int timer) {
         try {
-            TimeUnit.SECONDS.sleep(2);
+            TimeUnit.SECONDS.sleep(timer);
         } catch (InterruptedException ie) {
             Thread.currentThread().interrupt();
         }
