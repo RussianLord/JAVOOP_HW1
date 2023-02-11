@@ -50,22 +50,23 @@ public class Main {
         Auto lamborghiniD = new Auto("Lamborghini", "Diablo SV", "Agressive Yellow", "Miami"
                 , 4.6, 550.87, 2001, 250, 0, false);
 
-        Track jakarta = new Track("Jakarta",5000, 4);
+        Track jakarta = new Track("Jakarta", 5000, 4);
         Track hongkong = new Track("Hong Kong", 6500, 5);
         Track tokyo = new Track("Tokyo", 4000, 6);
 
         lamborghiniD.start();
+        lamborghiniD.store();
         lamborghiniD.stop();
-
-        pagani.path(pagani.getCity());
 
         porche911.start();
         porche911.stop();
         porche911.path(porche911.getCity());
 
-        Auto.comparison(pagani,lamborghiniD); // Сравнение автомобилей
+        hongkong.getInfo();
+
+        Auto.comparison(pagani, lamborghiniD); // Сравнение автомобилей
         System.out.println(" ");
-        Racing.autosport(lamborghiniH,pagani,porche911,lamborghiniD,jakarta); // Гонки, первое место засчитывается по максимальной скорости
+        Racing.autosport(lamborghiniH, pagani, porche911, lamborghiniD, jakarta); // Гонки, первое место засчитывается по максимальной скорости
     }
 
 

@@ -3,7 +3,7 @@ public class Track {
     private int lengthTrack, lap;
 
 
-    public Track( String trackName, int lengthTrack, int lap) {
+    public Track(String trackName, int lengthTrack, int lap) {
         this.trackName = trackName;
         this.lengthTrack = lengthTrack;
         this.lap = lap;
@@ -19,5 +19,9 @@ public class Track {
 
     String getTrackName() {
         return trackName;
+    }
+
+    public void getInfo() {
+        System.out.println("Трасса: " + getTrackName() + ". Длина трека: " + getLengthTrack() + ". Количество кругов: " + getLap());
     }
 }

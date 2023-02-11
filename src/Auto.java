@@ -67,13 +67,15 @@ public class Auto {
     public void start() {
         startStop = true;
         System.out.println("Автомобиль " + brand + " " + model + " заведён...");
-        path(city);
+    }
+
+    public void store(){
+        path("Магазин");
     }
 
     public void stop() {
         startStop = false;
         System.out.println("Автомобиль " + brand + " " + model + " заглушен...");
-        path(city);
     }
 
     public void path(String city) {

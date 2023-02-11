@@ -11,7 +11,9 @@ public class Racing {
         System.out.println("Добро пожаловать на автогонки RTX-Life!!!\n");
         delay(2);
         System.out.println("Сегодня в заезде учавствуют: " + car1.getModel() + " / " + car2.getModel() + " / "
-                + car3.getModel() + " / " + car4.getModel());
+                + car3.getModel() + " / " + car4.getModel()+"\n");
+        delay(2);
+        map.getInfo();
         delay(2);
         Map<Integer, String> racers = new HashMap<>();
         racers.put(1, car1.getBrand() + " " + car1.getModel());
