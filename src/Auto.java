@@ -4,7 +4,8 @@ public class Auto {
     public static final String ANSI_RED = "\u001B[31m";
     private String brand, model, color, city;
     private double power, price;
-    private int year, speed, averagePower;
+    private int year, averagePower;
+    int speed;
     private boolean startStop;
 
     public Auto(String brand, String model, String color, String city, double power, double price, int year, int speed, int averagePower, boolean startStop) {

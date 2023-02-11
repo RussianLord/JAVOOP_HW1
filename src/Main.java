@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 public class Main {
     /*
     Доработайте программу в свободном стиле.
@@ -38,6 +40,7 @@ public class Main {
     public static final String ANSI_RED = "\u001B[31m";
 
     public static void main(String[] args) {
+
         Auto lamborghiniH = new Auto("Lamborghini", "Huracan", "Nature Orange", "Bali"
                 , 6.4, 1025.55, 2017, 300, 0, false);
         Auto porche911 = new Auto("Porche", "911 GT", "Speed Gray", "Jakarta"
@@ -47,15 +50,22 @@ public class Main {
         Auto lamborghiniD = new Auto("Lamborghini", "Diablo SV", "Agressive Yellow", "Miami"
                 , 4.6, 550.87, 2001, 250, 0, false);
 
+        Track jakarta = new Track("Jakarta",5000, 4);
+        Track hongkong = new Track("Hong Kong", 6500, 5);
+        Track tokyo = new Track("Tokyo", 4000, 6);
 
         lamborghiniD.start();
         lamborghiniD.stop();
+
         pagani.path(pagani.getCity());
+
         porche911.start();
         porche911.stop();
         porche911.path(porche911.getCity());
 
         Auto.comparison(pagani,lamborghiniD);
+        System.out.println(" ");
+        Racing.autosport(lamborghiniH,pagani,porche911,lamborghiniD,jakarta);
     }
 
 
