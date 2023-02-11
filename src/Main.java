@@ -63,9 +63,9 @@ public class Main {
         porche911.stop();
         porche911.path(porche911.getCity());
 
-        Auto.comparison(pagani,lamborghiniD);
+        Auto.comparison(pagani,lamborghiniD); // Сравнение автомобилей
         System.out.println(" ");
-        Racing.autosport(lamborghiniH,pagani,porche911,lamborghiniD,jakarta);
+        Racing.autosport(lamborghiniH,pagani,porche911,lamborghiniD,jakarta); // Гонки, первое место засчитывается по максимальной скорости
     }
 
 
