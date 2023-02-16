@@ -53,20 +53,22 @@ public class Main {
         Track jakarta = new Track("Jakarta", 5000, 4);
         Track hongkong = new Track("Hong Kong", 6500, 5);
         Track tokyo = new Track("Tokyo", 4000, 6);
+//        porche911.getInfo();
+//      lamborghiniD.start();
+//      lamborghiniD.store();
+//      lamborghiniD.stop();
+//
+//        porche911.start();
+//        porche911.stop();
+//        porche911.path(porche911.getCity());
+//
+//        jakarta.getInfo();
 
-        lamborghiniD.start();
-        lamborghiniD.store();
-        lamborghiniD.stop();
-
-        porche911.start();
-        porche911.stop();
-        porche911.path(porche911.getCity());
-
-        hongkong.getInfo();
-
-        Auto.comparison(pagani, lamborghiniD); // Сравнение автомобилей
-        System.out.println(" ");
-        Racing.autosport(lamborghiniH, pagani, porche911, lamborghiniD, jakarta); // Гонки, первое место засчитывается по максимальной скорости
+//        Auto.comparison(pagani, lamborghiniH); // Сравнение автомобилей
+//        System.out.println(" ");
+        pagani.setModel("Huyara");
+        pagani.setSpeed(220);
+        Racing.autosport(lamborghiniH, pagani, porche911, lamborghiniD, hongkong); // Гонки, первое место засчитывается по максимальной скорости
     }
 
 

@@ -17,6 +17,18 @@ public class Track {
         return lengthTrack;
     }
 
+    public void setTrackName(String trackName) {
+        this.trackName = trackName;
+    }
+
+    public void setLengthTrack(int lengthTrack) {
+        this.lengthTrack = lengthTrack;
+    }
+
+    public void setLap(int lap) {
+        this.lap = lap;
+    }
+
     String getTrackName() {
         return trackName;
     }
